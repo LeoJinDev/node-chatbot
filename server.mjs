@@ -23,6 +23,8 @@ app.get('/', async (req, res) => {
   res.status(200).send(response);
 })
 
-app.listen(3088, () => {
-  console.log(`Example app listening at http://localhost:3088`)
+const port = process.env.port || 3088
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
 })
